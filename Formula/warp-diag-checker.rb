@@ -9,7 +9,7 @@ class WarpDiagChecker < Formula
 
   on_macos do
     url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Darwin_all.tar.gz"
-    sha256 "ec52eb06ba63d88e4c48ea094880b6b4640d24f5516a856d3b2ab202fc9af072"
+    sha256 "85f2759c6db9c994c1b2189d0cea19b7c9cd4ab5006cfdea41eea523228ac2b4"
 
     def install
       bin.install "warp-diag-checker"
@@ -17,17 +17,17 @@ class WarpDiagChecker < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Linux_arm64.tar.gz"
-      sha256 "e698bdb8d6ca4b2cb61981bd907e381e27fdd4a0c1288c8a9938d2402d725f7a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Linux_armv6.tar.gz"
+      sha256 "e4588b5f4988f014e0951f8a36d95602c77716dd64ab3463e76954532f5ea396"
 
       def install
         bin.install "warp-diag-checker"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Linux_armv6.tar.gz"
-      sha256 "13fa3324b2c1de51c347463fcaf9ba1f63bd023bd96f78464a02e1f81a10e18f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Linux_arm64.tar.gz"
+      sha256 "41234c16a3d9f8dc526e6f9a08b33cc9bde727b23dfa5a54a1afbab41776b7d3"
 
       def install
         bin.install "warp-diag-checker"
@@ -35,7 +35,7 @@ class WarpDiagChecker < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/peakefficiency/warp-diag-checker/releases/download/1.0.0/warp-diag-checker_Linux_x86_64.tar.gz"
-      sha256 "b358b2d9ef90cf9afc3b0e88af7b855292aee634076a95c9c7d3b0e38c5b6467"
+      sha256 "d81514a225ad7fe7b416953b2911d3b476cb62848b5f293d6d54102db008835e"
 
       def install
         bin.install "warp-diag-checker"
