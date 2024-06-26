@@ -9,7 +9,7 @@ class WarpDiagChecker < Formula
 
   on_macos do
     url "https://github.com/peakefficiency/warp-diag-checker/releases/download/0.7.3/warp-diag-checker_Darwin_all.tar.gz"
-    sha256 "a0352fbf5d80056a1ec2b0e17544e647448eefc113b719700df0518635a5654d"
+    sha256 "d5059b64bd5b64cb77085c1e5f77282e388d48560f49bea8f46a1d81c0e751fc"
 
     def install
       bin.install "warp-diag-checker"
@@ -20,7 +20,7 @@ class WarpDiagChecker < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/peakefficiency/warp-diag-checker/releases/download/0.7.3/warp-diag-checker_Linux_x86_64.tar.gz"
-        sha256 "34512f29c6295539e8dcf0832ac926b057d50ea9eef109666ab544d5a69a59a7"
+        sha256 "2d0f6f8383c64c7d90695c5f1eb9d2dd78c0308247175d619b540b75469e03f4"
 
         def install
           bin.install "warp-diag-checker"
@@ -30,7 +30,7 @@ class WarpDiagChecker < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/peakefficiency/warp-diag-checker/releases/download/0.7.3/warp-diag-checker_Linux_armv6.tar.gz"
-        sha256 "8730880907d6cf15cdb6278fcc64e6f44b8456333a746300630e9958749fc85a"
+        sha256 "cdc873c9a3eee1552056ec24894a3e7b76baf9a1ffc7958add3793fc2d854f4e"
 
         def install
           bin.install "warp-diag-checker"
@@ -40,7 +40,7 @@ class WarpDiagChecker < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/peakefficiency/warp-diag-checker/releases/download/0.7.3/warp-diag-checker_Linux_arm64.tar.gz"
-        sha256 "5f87e263997485443adbd752d7c998eee6cfa6e8514021858839777e68114297"
+        sha256 "7e375cf26bf390ba875c64fed2dff626f40ad8839b4c5b448070c646d6423328"
 
         def install
           bin.install "warp-diag-checker"
